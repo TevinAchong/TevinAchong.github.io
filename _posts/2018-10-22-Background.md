@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Background
-published: true
+published: false
 ---
 
 I'm Tevin Achong, welcome you to my "page". I'm gonna give you a little background about myself so that we're not complete strangers. 
