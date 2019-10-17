@@ -1,0 +1,15 @@
+---
+layout: post
+title: COMP 3613 Post 0
+published: true
+---
+
+During this week, the majority of our efforts were spent deciding which technologies would be used to develop the application.
+After some deliberation, our team decided on using ReactJS on the front-end of the application and Firebase to store data. 
+We also confirmed what we would be using to capture the tweets and perform sentiment analysis.
+The Twitter API will help us to retrieve tweets while a Python library called Vader will be used to perform sentiment analysis.
+Vader is optimized to perform well on social-media-like text.
+Project roles were also established, as well as the meeting schedule for the group.
+Development is scheduled to start during this week. 
+
+Expect frequent updates, and join me and the team in learning how to implement and integrate all these technologies.
