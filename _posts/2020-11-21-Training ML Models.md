@@ -14,4 +14,6 @@ Two different ways to train the linear regression model are discussed:
 
 A linear model makes a prediction by simply computing a weighted sum of the input features, plus a constant called the *bias term*. 
 
-$$ \hat{y} = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + ... + \theta_n x_n $$
+```
+\hat{y} = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + ... + \theta_n x_n
+```
