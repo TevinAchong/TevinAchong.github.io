@@ -6,7 +6,7 @@ published: true
 
 This post contains my notes about training machine learning models. The majority of content is information summarized from Aurelien Geron's book [Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow](https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1492032646/ref=pd_lpo_14_t_0/139-2845639-1288614?_encoding=UTF8&pd_rd_i=1492032646&pd_rd_r=b7d9fcc6-fb0b-4355-9914-8946ce444f49&pd_rd_w=wr8Wm&pd_rd_wg=2Ltb3&pf_rd_p=7b36d496-f366-4631-94d3-61b87b52511b&pf_rd_r=HEY5HJ6F40FFSND2R3BW&psc=1&refRID=HEY5HJ6F40FFSND2R3BW).
 
-### The Linear Regression Model
+## The Linear Regression Model
 
 Two different ways to train the linear regression model are discussed:
 - Using a direct "closed-form" equation that directly computes the model parameters that best fit the model to the training set (those parameter values that minimize the cost function over the training set).
@@ -27,7 +27,7 @@ Where:
 We can express this more concisely using the vectorized form:
 
 $$
-\hat{y} = h_0(x) = \theta \cdot x
+\hat{y} = h_\theta(x) = \theta \cdot x
 $$
 
 Where:
@@ -35,3 +35,20 @@ Where:
 - $ x $ is the instance's *feature vector*, containing $ x_0 $ to $ x_n $, with $ x_0 $ always equal to 1. 
 - $ \theta \cdot x $ is the dot product of the vectors $ \theta $ and $ x $ ($ \theta_0x_0 + \theta_1x_1 + ... + \theta_nx_n $).
 - $ h_0 $ is the hypothesis function, using the model parameters $ \theta $.
+
+## How Do We Train the Linear Regression Model
+Recall that training a model means setting its parameters so that the model best fits the training sets. 
+
+We need a measure of how well (or poorly) the model fits the training data. The most common performance measure of a regression model is the **Root Mean Squared Error (RMSE)**:
+$$
+\text{RMSE}(X, h) = \sqrt{\frac{1}{m} \sum^m_{i=1} (h(x^{(i)}) - y^{(i)})^2}
+$$
+
+To train a Linear Regression model, we need to find the value of $\theta$ that minimizes the RMSE. 
+
+In practice, it is simpler to minimize the MSE than the RMSE and it leads to the same result (because the value that minimizes a function also minimizes its square root).
+
+MSE:
+$$
+\text{MSE}(X, h_\theta) = \frac{1}{m}\sum^m_{i=1}(\theta^Tx^{(i)}-y^{(i)})^2
+$$
