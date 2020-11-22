@@ -27,11 +27,11 @@ Where:
 We can express this more concisely using the vectorized form:
 
 $$
-\hat{y} = h_0(x) = \theta \dot x
+\hat{y} = h_0(x) = \theta \cdot x
 $$
 
 Where:
 - $ \theta $ is the model's *parameter vector*, containing the bias term $ \theta_0 $ and the feature weights $ \theta_1 $ to $ \theta_n $. 
 - $ x $ is the instance's *feature vector*, containing $ x_0 $ to $ x_n $, with $ x_0 $ always equal to 1. 
-- $ \theta \dot x $ is the dot product of the vectors $ \theta $ and $ x $ ($ \theta_0x_0 + \theta_1x_1 + ... + \theta_nx_n $).
+- $ \theta \cdot x $ is the dot product of the vectors $ \theta $ and $ x $ ($ \theta_0x_0 + \theta_1x_1 + ... + \theta_nx_n $).
 - $ h_0 $ is the hypothesis function, using the model parameters $ \theta $.
