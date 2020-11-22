@@ -40,15 +40,57 @@ Where:
 Recall that training a model means setting its parameters so that the model best fits the training sets. 
 
 We need a measure of how well (or poorly) the model fits the training data. The most common performance measure of a regression model is the **Root Mean Squared Error (RMSE)**:
+
 $$
 \text{RMSE}(X, h) = \sqrt{\frac{1}{m} \sum^m_{i=1} (h(x^{(i)}) - y^{(i)})^2}
 $$
 
 To train a Linear Regression model, we need to find the value of $\theta$ that minimizes the RMSE. 
 
-In practice, it is simpler to minimize the MSE than the RMSE and it leads to the same result (because the value that minimizes a function also minimizes its square root).
+In practice, it is simpler to minimize the **MSE** than the RMSE and it leads to the same result (because the value that minimizes a function also minimizes its square root).
 
-MSE:
 $$
 \text{MSE}(X, h_\theta) = \frac{1}{m}\sum^m_{i=1}(\theta^Tx^{(i)}-y^{(i)})^2
 $$
+
+The above equation is the MSE of a Linear Regression hypothesis $h_\theta$ on a training set $X$. 
+
+For simplification, we represent this as:
+
+$$
+MSE(\theta)
+$$
+
+to stress that the model is parametrized by the vector $\theta$.
+
+### The Normal Equation
+This is a mathematical equation that directly gives the value of $\theta$ that minimizes the cost function - a *closed form solution*. 
+
+$$
+\hat{\theta} = (X^TX)^{-1}X^Ty
+$$
+
+Where:
+- $\hat{\theta}$ is the value of $\theta$ that minimizes the cost function
+- $y$ is the vector of target values containing containing $y^{(1)}$ to $y^{(m)}$
+
+Performing Linear Regression with Scikit-Learn is relatively simple:
+
+```
+from sklearn.linear_model import LinearRegression
+lin_reg = LinearRegression()
+lin_reg.fit(X, y)
+lin_reg.predict(X_new)
+```
+
+The `LinearRegression` class is based on the `scipy.linalg.lstsq()` function (which stands for "least squares"). 
+
+
+
+
+
+
+
+
+
+
