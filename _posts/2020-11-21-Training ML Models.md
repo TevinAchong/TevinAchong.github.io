@@ -34,7 +34,7 @@ Where:
 - $ \theta $ is the model's *parameter vector*, containing the bias term $ \theta_0 $ and the feature weights $ \theta_1 $ to $ \theta_n $. 
 - $ x $ is the instance's *feature vector*, containing $ x_0 $ to $ x_n $, with $ x_0 $ always equal to 1. 
 - $ \theta \cdot x $ is the dot product of the vectors $ \theta $ and $ x $ ($ \theta_0x_0 + \theta_1x_1 + ... + \theta_nx_n $).
-- $ h_0 $ is the hypothesis function, using the model parameters $ \theta $.
+- $ h_\theta $ is the hypothesis function, using the model parameters $ \theta $.
 
 ## How Do We Train the Linear Regression Model
 Recall that training a model means setting its parameters so that the model best fits the training sets. 
