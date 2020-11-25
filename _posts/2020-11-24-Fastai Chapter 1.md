@@ -7,9 +7,19 @@ published: true
 Here I answer (some of) the questions at the end of the first chapter of [Deep Learning for Coders with fastai and PyTorch](https://github.com/fastai/fastbook).
 
 1. **What was the name of the first device that was based on the principle of the artificial neuron?**
-  - 
+  - The name of this device was the *Mark I Perceptron*. It was primarily developed by Mark Rosenblatt (when he expanded upon work done by Warren McCulloch and Walter Pitts). In "The Design of an Intelligent Automaton", Rosenblatt wrote about this work: "We are now about to witness the birth of such a machine - a machine capable of perceiving, recognizing and identifying its surroundings without any human training or control". It was able to successfully recognize simple shapes. 
+  
 2. **Based on the book of the same name, what are some of the requirements for parallel distributed processing (PDP)?**
-  -
+  - A set of *processing units*
+  - A state of *activation*
+  - An *output function* for each unit
+  - A *pattern of connectivity* among units
+  - A *propogation rule* for propogating patterns of activities through the network of connectivities
+  - An *activation rule* for combining the inputs impinging on a unit with the current state of that unit to produce an output for the unit
+  - A *learning rule* whereby patterns of connectivity are modified by experience
+  - An *environment* within which the system must operate
+  Neural networks handle each of these requirements.
+  
 3. **What were two theoretical misunderstandings that held back the field of neural networks?**
   -
 4. **What is a GPU?**
